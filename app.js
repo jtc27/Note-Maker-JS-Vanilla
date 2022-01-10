@@ -21,8 +21,11 @@ class UI {
 
     const row = document.createElement('tr'); //creates tr tag in site
 
+    const currentDate = new Date();
+    const timestamp = currentDate.getTime();
+
     row.innerHTML = `
-    <td>${time}</td>
+    <td>${timestamp}</td>
     <td>${book.title}</td>
     <td>${book.note}</td>
     <td><a href ="#" class="btn btn-danger btn-sm delete">X</a></td>
