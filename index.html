@@ -13,19 +13,19 @@
   <div class="container mt-4">
     <h1 class="display-4 text-center">
       <i class ="fas fa-sticky-note"></i> 
-      <span class="text-primary">Note</span>Maker</h1>
+      <span class="text-danger">Note</span>Maker</h1>
 
-      <div id="clock">date</div>
+      <div id="clock"></div>
 
-      <form id="book-form">
+      <form id="note-form">
         <div class = "form-group">
           <label for="title">Title</label>
           <input type="text" id="title" class="form-control">
         </div>
 
         <div class = "form-group">
-          <label for="author">Note</label>
-          <input type="text" id="author" class="form-control">
+          <label for="note">Note</label>
+          <input type="text" id="note" class="form-control">
         </div>
   
         <br>
@@ -42,7 +42,7 @@
           </tr>
         </thead>
 
-        <tbody id="book-list"> <!-- method addBookToList() will add rows of books here -->
+        <tbody id="note-list">
         </tbody>
       </table>
 
