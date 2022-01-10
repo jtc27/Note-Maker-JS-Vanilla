@@ -12,7 +12,7 @@
 <body>
   <div class="container mt-4">
     <h1 class="display-4 text-center">
-      <i class ="fas fa-book-open"></i> 
+      <i class ="fas fa-sticky-note"></i> 
       <span class="text-primary">Note</span>Maker</h1>
 
       <div id="clock">date</div>
@@ -24,24 +24,20 @@
         </div>
 
         <div class = "form-group">
-          <label for="author">Author</label>
+          <label for="author">Note</label>
           <input type="text" id="author" class="form-control">
         </div>
   
-        <div class = "form-group">
-          <label for="isbn">ISBN#</label>
-          <input type="text" id="isbn" class="form-control">
-        </div>
         <br>
-        <input type="submit" value="Add Book" class="btn btn-primary btn-block"></input>
+        <input type="submit" value="Add Note" class="btn btn-primary btn-block"></input>
       </form>
 
       <table class="table table-striped  mt-5">
         <thead>
           <tr>
+            <th>Time</th>
             <th>Title</th>
-            <th>Author</th>
-            <th>IBSN</th>
+            <th>Note</th>
             <th></th>  <!-- Delete button -->
           </tr>
         </thead>

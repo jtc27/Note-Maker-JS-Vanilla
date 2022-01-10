@@ -9,13 +9,7 @@ class Book {
 
 // UI class: Handle UI tasks
 class UI {
-  // static methods, so we don't have to instantiate
   static displayBooks() {
-  /*  
-  1. gets stored books 
-  2. loops through them
-  3. addBookToList for each Book
-  */
 
     const books = Store.getBooks();
 
@@ -28,9 +22,9 @@ class UI {
     const row = document.createElement('tr'); //creates tr tag in site
 
     row.innerHTML = `
+    <td>${time}</td>
     <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
+    <td>${book.note}</td>
     <td><a href ="#" class="btn btn-danger btn-sm delete">X</a></td>
     `;
 
