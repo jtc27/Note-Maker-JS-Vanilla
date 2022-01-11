@@ -50,6 +50,20 @@ class UI {
 document.addEventListener('DOMContentLoaded', UI.displayNotes);
 
 // Event: Add Note
+document.querySelector('#note-form').addEventListener('submit', (e)=> {
+
+  // Prevent actual submit, because it's a submit event
+  e.preventDefault();
+
+  //get form values
+  const title = document.querySelector('#title').value;
+  const message  = document.querySelector('#message').value;
+
+  //instantiate note
+  const note = new Note(`time`, title, message)
+
+  console.log(note)
+})
 
 // Event: Remove Note
 
