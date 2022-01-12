@@ -12,12 +12,12 @@ class UI {
   static displayNotes(){
     const StoredNotes = [
       {
-        time_logged: 'yesterday',
+        time_logged: 'January 11, 2022, 5:08:39 PM',
         title: 'jogging',
         message: 'go jogging'
       },
       {
-        time_logged: 'tomorrow',
+        time_logged: 'January 11, 2022, 6:11:59 PM',
         title: 'bank',
         message: 'go to the bank'
       },
@@ -56,13 +56,15 @@ document.querySelector('#note-form').addEventListener('submit', (e)=> {
   e.preventDefault();
 
   //get form values
+  var time_logged = new Date();
   const title = document.querySelector('#title').value;
   const message  = document.querySelector('#message').value;
 
   //instantiate note
-  const note = new Note(`time`, title, message)
+  const note = new Note(time_logged.toLocaleString('en-US', {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true}), title, message)
 
-  console.log(note)
+  //Add note to UI
+  UI.addNoteToList(note);
 })
 
 // Event: Remove Note
